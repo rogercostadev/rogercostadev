@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles/global.min.css">
+  <link rel="stylesheet" href="/styles/live-semanal.min.css">
+
+  <title>Roger Costa - Inscreva-se na live semanal de desenvolvimento web.</title>
+</head>
+<body>
+
+  <!-- <script type="module" template-header>
+    import header from '/templates/header.js';
+    document.querySelector('script[template-header]').outerHTML = header;
+  </script> -->
+
+  <main id="page-wrapper" class="container">
+
+    <section id="content">
+
+      <div class="image-wrapper">
+        <img src="/public/live-semanal/thumb.png" alt="Próxima live" 
+        decoding="sync"
+        />
+      </div>
+      <p class="page-subtitle">
+        ONLINE E GRATUITO.
+      </p>
+      <h1 class="page-title">
+        Aprenda a programar do zero páginas com HTML, CSS & JavaScript.
+      </h1>
+      <p class="page-description">
+        Amplie os seus conhecimentos em desenvolvimento web com projeto práticos e direto ao ponto.
+      </p>
+
+      <div class="date-wrapper">
+        <img src="/public/live-semanal/date-icon.svg"  alt="Próxima live" loading="lazy" />
+        <span>
+          Todas as quintas-feiras, às 19:00hrs (Próxima 07/03)
+        </span>
+      </div>
+
+    </section>
+
+    <section id="form-wrapper">
+
+      <div class="botton-wrapper">
+        <img src="/public/live-semanal/botton.png" alt="Botton" loading="lazy" decoding="async" class="botton">
+        <img src="/public/live-semanal/botton-text.png" alt="Botton text" loading="lazy" decoding="async" class="botton-text">
+      </div>
+      
+      <h2>Inscreva-se para não perder uma live!</h2>
+
+      <form 
+        id="sib-form" 
+        method="POST" 
+        action="https://99816cee.sibforms.com/serve/MUIFALpf52LfPEz6mnKQs_Xd2K2P9am-jKgVjKj-gbdpyAbrLNFOYU7D9XuK04QvWDJVegQUupUYjyQvTrg6JmUBSluB3YTM3-gaD6CTVD4Tos2r8D0lnYdXn2WpeXayFWtKMRQ7-b0l8YXI8LdjgNLkpyy7nHG6K9_47rF1EhNRWgUZhOjyewDmQ-72leulKiUJIb1_Lfunnkzs" 
+        data-type="subscription"
+      >
+        <div class="input-wrapper">
+          <img src="/public/user-icon.svg" alt="Ícone de usuário" loading="lazy">
+          <input class="input " maxlength="200" type="text" id="NOME" name="NOME" autocomplete="off" placeholder="Nome completo" />
+        </div>
+
+        <div class="input-wrapper">
+          <img src="/public/email-icon.svg" alt="Ícone de usuário" loading="lazy">
+          <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="Seu melhor e-mail" data-required="true" required />
+        </div>
+
+        <div class="input-wrapper">
+          <img src="/public/whatsapp-icon.svg" alt="Ícone de usuário" loading="lazy">
+          <input class="input " maxlength="200" type="text" id="SOBRENOME" name="SOBRENOME" autocomplete="off" placeholder="WhatsApp" />
+        </div>
+
+        <p class="alert">Ao enviar, você concorda com os termos de uso e políticas do site. Não enviamos spam.</p>
+
+        <button class="sib-form-block__button sib-form-block__button-with-loader" form="sib-form" type="submit">
+          QUERO SER AVISADO
+        </button>
+
+        <input type="hidden" name="email_address_check" value="">
+        <input type="hidden" name="locale" value="pt">
+
+      </form>
+    </section>
+
+    <section id="more">
+
+      <div class="author">
+        <h2>Quem estará no comando das lives</h2>
+        <div class="header">
+          <img src="/public/avatar-roger.png" alt="Roger Costa" loading="lazy" decoding="async">
+          <div class="infos">
+            <h3 class="name">Roger Costa</h3>
+            <p class="label">Programador e infoprodutor</p>
+          </div>
+        </div>
+        <p class="description">
+          Programador há pelo menos 10 anos, começou desenvolvendo scrips para servidores de GTA San Andreas Multiplayer (SAMP). Apaixonado por tecnologia e programação, já participou dos maiores lançamentos do Brasil.
+        </p>
+      </div>
+      
+    </section>
+
+  </main>
+
+  <script>
+    const inputNome = document.querySelector('input#NOME');
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', function(e) {
+      if(inputNome.value === '') {
+        e.preventDefault();
+        inputNome.focus();
+      }
+    });
+  </script>
+
+  <!-- <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script> -->
+
+  <!-- <script id="template-load" type="module" src="/index.js" data-templates="header footer"></script> -->
+</body>
+</html>
