@@ -25,9 +25,11 @@
     <section id="content">
 
       <div class="image-wrapper">
-        <img src="/assets/live-semanal/thumb.png" alt="Próxima live" 
-        decoding="sync"
-        />
+        <picture>
+          <source media="(max-width: 768px)" srcset="/assets/live-semanal/thumb-mobile.png">
+          <source media="(min-width: 769px)" srcset="/assets/live-semanal/thumb.png">
+          <img src="/assets/live-semanal/thumb.png" alt="Próxima live" decoding="sync" />
+        </picture>
       </div>
       <p class="page-subtitle">
         ONLINE E GRATUITO.
