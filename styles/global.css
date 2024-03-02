@@ -40,6 +40,26 @@ img, svg {
   display: block;
 }
 
+header {
+  padding: 16px 0;
+  width: 100%;
+  background: rgba(22, 22, 22, 0.5019607843);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+header .logo {
+  font-size: 2.6rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: #D9D9D9;
+}
+header .logo span {
+  font-family: "Syne Mono";
+}
+
 @media screen and (max-width: 900px) {
   html {
     font-size: 8px;
