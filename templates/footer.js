@@ -3,7 +3,7 @@ const footer = `
 <footer>
   <div class="container">
     <div class="left">
-      <a href="/" class="logo">
+      <a href="#" class="logo">
         R
         <span>&lt;/&gt;</span>
       </a>
