@@ -114,6 +114,11 @@
 
   </main>
 
+  <script type="module" template-footer>
+    import footer from '/templates/footer.js';
+    document.querySelector('script[template-footer]').outerHTML = footer;
+  </script>
+
   <script>
     const inputNome = document.querySelector('input#NOME');
     const form = document.querySelector('form');

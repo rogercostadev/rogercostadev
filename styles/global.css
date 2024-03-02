@@ -60,11 +60,54 @@ header .logo span {
   font-family: "Syne Mono";
 }
 
+footer {
+  padding: 16px 0 8rem;
+  width: 100%;
+}
+footer .logo {
+  font-size: 2.6rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: #D9D9D9;
+}
+footer .logo span {
+  font-family: "Syne Mono";
+}
+footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+footer .right img {
+  height: 18px;
+}
+footer .right a {
+  transition: 0.5s;
+}
+footer .right a:hover {
+  opacity: 0.6;
+}
+footer .right span {
+  font-family: "Syne Mono";
+  font-size: 1.6rem;
+  margin-right: 8px;
+  opacity: 0.65;
+}
+
 @media screen and (max-width: 900px) {
   html {
     font-size: 8px;
   }
   .container {
     width: 90%;
+  }
+  footer .right span {
+    display: none;
   }
 }
