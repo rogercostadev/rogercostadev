@@ -210,7 +210,7 @@
       flex: 1 1 300px;
       border-radius: 20px;
       padding: 4.0rem 2.4rem;
-      background: linear-gradient(to bottom, #161616bd, transparent);
+      background: #181818;
 
       display: flex;
       flex-direction: column;
@@ -330,6 +330,79 @@
     border-radius: 10px;
     overflow: hidden;
   }
+}
+
+#depoimentos {
+
+  overflow-x: hidden;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-title {
+    text-align: center;
+  }
+  
+  .depoimento-item {
+    background: #FFFFFF03;
+    border-radius: 10px;
+    padding: 24px;
+    /* max-width: 380px; */
+    /* margin-right: 20px; */
+    position: relative;
+    min-height: 280px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    flex: 1 1 350px;
+  }
+  
+  .depoimento-line {
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #121212, #202020, #121212, transparent);
+    top: 0;
+    position: absolute;
+  }
+  
+  .depoimento-texto {
+    font-size: 16px;
+    // line-height: 1.6;
+    margin-bottom: 16px;
+    color: #ffffff75;
+  }
+  
+  
+  .depoimentos-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.4rem;
+    margin-top: 4rem;
+  }
+  
+  .depoimento-autor-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    margin-top: 16px;
+  }
+  
+  .depoimentos-autor-trabalho {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    color: #D9D9D9;
+    opacity: .7;
+    margin-top: 4px;
+  }
+  
 }
 
 

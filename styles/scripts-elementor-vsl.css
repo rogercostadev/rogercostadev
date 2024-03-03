@@ -178,7 +178,7 @@
   flex: 1 1 300px;
   border-radius: 20px;
   padding: 4rem 2.4rem;
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.7411764706), transparent);
+  background: #181818;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -274,6 +274,64 @@
   flex: 1 1 300px;
   border-radius: 10px;
   overflow: hidden;
+}
+
+#depoimentos {
+  overflow-x: hidden;
+}
+#depoimentos .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#depoimentos .section-title {
+  text-align: center;
+}
+#depoimentos .depoimento-item {
+  background: rgba(255, 255, 255, 0.0117647059);
+  border-radius: 10px;
+  padding: 24px;
+  /* max-width: 380px; */
+  /* margin-right: 20px; */
+  position: relative;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex: 1 1 350px;
+}
+#depoimentos .depoimento-line {
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #121212, #202020, #121212, transparent);
+  top: 0;
+  position: absolute;
+}
+#depoimentos .depoimento-texto {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, 0.4588235294);
+}
+#depoimentos .depoimentos-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  margin-top: 4rem;
+}
+#depoimentos .depoimento-autor-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+#depoimentos .depoimentos-autor-trabalho {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  color: #D9D9D9;
+  opacity: 0.7;
+  margin-top: 4px;
 }
 
 @media screen and (max-width: 768px) {
