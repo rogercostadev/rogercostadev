@@ -11,6 +11,7 @@
   align-items: center;
   gap: 16px;
   position: relative;
+  margin-top: 8rem;
 }
 
 .circle {
@@ -22,6 +23,7 @@
 .page-subtitle {
   font-size: 1.4rem;
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 .page-title {
@@ -31,6 +33,7 @@
   letter-spacing: -3px;
   max-width: 900px;
   line-height: 1;
+  margin-bottom: 3.2rem;
 }
 
 .page-description {
