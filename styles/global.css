@@ -3,6 +3,20 @@
   --background-color: #121212;
 }
 
+@font-face {
+  font-family: "Syne";
+  src: local("Syne Bold"), local("Syne-Bold"), url("/assets/fonts/Syne-Bold.woff2") format("woff2"), url("/assets/fonts/Syne-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Syne Mono";
+  src: local("Syne Mono"), local("Syne-Mono"), url("/assets/fonts/SyneMono-Regular.woff2") format("woff2"), url("/assets/fonts/SyneMono-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 html {
   font-size: 10px;
   overflow-x: hidden;
