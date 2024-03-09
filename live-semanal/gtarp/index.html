@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Live Semanal - GTA RP</title>
+  <title>Live Semanal - GTA RP</title>  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&family=Syne:wght@400..800&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="/styles/gtarp.css">
 </head>
@@ -11,12 +15,14 @@
 
   <section id="hero">
 
-    <header id="header">
+    <header class="header">
+
       <div class="container">
 
         <div class="left">
 
           <img 
+          class="header-logo"
           src="/assets/live-semanal/gtarp/gta5-logo.svg" 
           alt="Cidade Baixa RP"
           >
@@ -26,7 +32,7 @@
             <span>356 online</span>
           </div>
 
-          <nav>
+          <nav class="header-nav">
             <ul>
               <li>Sobre</li>
               <li>Ocupações</li>
@@ -35,7 +41,7 @@
           </nav>
 
         </div>
-        
+
         <div class="right">
 
           <div class="social-icons">
@@ -48,18 +54,20 @@
             <a href="">
               <img src="/assets/live-semanal/gtarp/youtube-icon.svg" alt="Youtube">
             </a>
+
           </div>
 
           <a href="" class="btn">
             Painel
           </a>
         </div>
+
       </div>
     </header>
 
-    <div class="hero-infos">
-      <h1>Bem vindo ao Cidade Baixa RP</h1>
-      <p>Desperte a sua jornada de roleplay em um universo virtual extraordinário. No Cidade Baixa a imersão é a chave, e cada interação molda o seu destino. Junte-se a nós.</p>
+    <div class="hero-infos container">
+      <h1 class="page-title">Bem vindo ao Cidade Baixa RP</h1>
+      <p class="page-description">Desperte a sua jornada de roleplay em um universo virtual extraordinário. No Cidade Baixa a imersão é a chave, e cada interação molda o seu destino. Junte-se a nós.</p>
 
       <a href="" class="btn">
         Conectar no servidor
@@ -75,22 +83,23 @@
       <div class="section-header">
 
         <div class="item labels">
+
           <div class="left">
             <span>Ocupações</span>
             <h2 class="section-title">Organizações</h2>
           </div>
-          <div class="right">
-            <nav>
-              <ul>
-                <li>Empregos</li>
-                <li>Organizações</li>
-                <li>Facções</li>
-              </ul>
-            </nav>
-          </div>
+
+          <nav class="section-header-nav">
+            <ul>
+              <li data-ocupacao="empregos" class="active">Empregos</li>
+              <li data-ocupacao="organizacoes">Organizações</li>
+              <li data-ocupacao="faccoes">Facções</li>
+            </ul>
+          </nav>
         </div>
 
         <div class="item divisor"></div>
+
         <p class="section-description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, tempora velit numquam rem in doloribus inventore sit reiciendis. Ipsam libero laudantium aliquam quia, minus voluptate suscipit totam iusto dolorem quod?
         </p>
@@ -98,7 +107,8 @@
       </div>
 
       <div class="cards-wrapper">
-        <div class="cards">
+        
+        <div class="cards active" data-ocupacao="empregos">
 
           <div class="card-item">
             <img src="/assets/live-semanal/gtarp/ocupacoes_policia.webp" alt="Seja um polícial militar">
@@ -141,11 +151,123 @@
 
 
         </div>
-      </div>
 
+        <div class="cards" data-ocupacao="organizacoes">
+
+          <div class="card-item">
+            <img src="/assets/live-semanal/gtarp/ocupacoes_medico.webp" alt="Seja um médico">
+            <h3>Médico 2</h3>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
+          </div>
+
+          <div class="card-item">
+            <img src="/assets/live-semanal/gtarp/ocupacoes_policia.webp" alt="Seja um polícial militar">
+            <span class="badge">Recrutando</span>
+            <h3>Policia Militar 2</h3>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
+          </div>
+
+          <div class="card-item">
+            <img src="/assets/live-semanal/gtarp/ocupacoes_policia.webp" alt="Seja um polícial militar">
+            <span class="badge">Recrutando</span>
+            <h3>Polícia 1212</h3>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
+          </div>
+
+
+          <div class="card-item">
+            <img src="/assets/live-semanal/gtarp/ocupacoes_medico.webp" alt="Seja um médico">
+            <h3>Médico 232332</h3>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
+          </div>
+
+
+
+          <div class="card-item">
+            <img src="/assets/live-semanal/gtarp/ocupacoes_medico.webp" alt="Seja um médico">
+            <h3>13131313</h3>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
+          </div>
+
+          <div class="card-item">
+            <img src="/assets/live-semanal/gtarp/ocupacoes_medico.webp" alt="Seja um médico">
+            <h3>Médico</h3>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
+          </div>
+
+        </div>
+
+        <div class="cards" data-ocupacao="faccoes">
+
+          <div class="card-item">
+            <img src="/assets/live-semanal/gtarp/ocupacoes_policia.webp" alt="Seja um polícial militar">
+            <span class="badge">Recrutando</span>
+            <h3>Polícia Militar 3</h3>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
+          </div>
+
+          <div class="card-item">
+            <img src="/assets/live-semanal/gtarp/ocupacoes_medico.webp" alt="Seja um médico">
+            <h3>Médico 3</h3>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
+          </div>
+
+          <div class="card-item">
+            <img src="/assets/live-semanal/gtarp/ocupacoes_medico.webp" alt="Seja um médico">
+            <h3>Médico 3</h3>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
+          </div>
+
+          <div class="card-item">
+            <img src="/assets/live-semanal/gtarp/ocupacoes_policia.webp" alt="Seja um polícial militar">
+            <span class="badge">Recrutando</span>
+            <h3>Polícia Militar</h3>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
+          </div>
+
+          <div class="card-item">
+            <img src="/assets/live-semanal/gtarp/ocupacoes_medico.webp" alt="Seja um médico">
+            <h3>Médico</h3>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
+          </div>
+
+          <div class="card-item">
+            <img src="/assets/live-semanal/gtarp/ocupacoes_medico.webp" alt="Seja um médico">
+            <h3>Médico</h3>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
+          </div>
+
+
+
+        </div>
+      </div>
 
     </div>
   </section>
+
+  <script>
+    const navItems = document.querySelectorAll('.section-header-nav ul li');
+    const cards = document.querySelectorAll('#ocupacoes .cards');
+
+    var currentItem = 0;
+
+    navItems.forEach(function(element, index) {
+    
+      element.addEventListener('click', function(event) {
+       
+        navItems[currentItem].classList.remove('active');
+        cards[currentItem].classList.remove('active');
+
+        currentItem = index;
+
+        navItems[currentItem].classList.add('active');
+        cards[currentItem].classList.add('active');
+
+      });
+    
+    })
+
+  </script>
 
   <section id="sobre">
 
@@ -173,26 +295,34 @@
 
           <div class="card-item">
             <img src="/assets/live-semanal/gtarp/sobre_personagem.webp" alt="Crie seu próprio personagem">
-            <h3>Crie seu personagem</h3>
-            <p>Sistema completo para criar seu personagem único.</p>
+            <div class="infos">
+              <h3>Crie seu personagem</h3>
+              <p>Sistema completo para criar seu personagem único.</p>
+            </div>
           </div>
 
           <div class="card-item">
             <img src="/assets/live-semanal/gtarp/sobre_loja_de_roupas.webp" alt="Explore a cidade">
-            <h3>Vista-se do jeito que quiser</h3>
-            <p>Lojas de roupas espalhadas pela cidade para você dar um trato no visual.</p>
+            <div class="infos">
+              <h3>Vista-se do jeito que quiser</h3>
+              <p>Lojas de roupas espalhadas pela cidade para você dar um trato no visual.</p>
+            </div>
           </div>
 
           <div class="card-item">
             <img src="/assets/live-semanal/gtarp/sobre_loja_de_veiculos.webp" alt="Atividades diversas">
-            <h3>Loja de veículos</h3>
-            <p>Compre veículos comuns até veículos totalmente exclusivos.</p>
+            <div class="infos">
+              <h3>Loja de veículos</h3>
+              <p>Compre veículos comuns até veículos totalmente exclusivos.</p>
+            </div>
           </div>
 
           <div class="card-item">
             <img src="/assets/live-semanal/gtarp/sobre_loja_de_roupas.webp" alt="Explore a cidade">
-            <h3>Vista-se do jeito que quiser</h3>
-            <p>Lojas de roupas espalhadas pela cidade para você dar um trato no visual.</p>
+            <div class="infos">
+              <h3>Vista-se do jeito que quiser</h3>
+              <p>Lojas de roupas espalhadas pela cidade para você dar um trato no visual.</p>
+            </div>
           </div>
 
         </div>
@@ -232,6 +362,7 @@
       </div>
 
       <div class="requisitos">
+
         <div class="left">
           <div class="item">
             <h3>Ter o jogo Grand Theft Auto V original.</h3>
@@ -250,6 +381,7 @@
             </a>
           </div>
         </div>
+        
         <div class="right">
           <div class="item">
             <h3>Configurações mínimas</h3>
@@ -322,9 +454,9 @@
 
         </div>
 
-        <div class="right">
+        <div class="right asks">
 
-          <div class="ask">
+          <div class="ask active">
 
             <div class="title-wrapper">
               <h3>O que é Roleplay?</h3>
@@ -394,11 +526,11 @@
     </div>
   </section>
 
-  <footer>
+  <footer id="footer">
     <div class="container">
 
       <div class="left">
-        <img src="/assets/live-semanal/gtarp/gta5-logo.svg" alt="Logo">
+        <img src="/assets/live-semanal/gtarp/gta5-logo.svg" alt="Logo" class="footer-logo">
         <p class="copyright">Cidade Baixa RP - Alguns direitos reservados</p>
       </div>
 
@@ -410,7 +542,6 @@
     </div>
   </footer>
 
-  
 
 </body>
 </html>
