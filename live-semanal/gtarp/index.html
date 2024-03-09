@@ -245,29 +245,6 @@
     </div>
   </section>
 
-  <script>
-    const navItems = document.querySelectorAll('.section-header-nav ul li');
-    const cards = document.querySelectorAll('#ocupacoes .cards');
-
-    var currentItem = 0;
-
-    navItems.forEach(function(element, index) {
-    
-      element.addEventListener('click', function(event) {
-       
-        navItems[currentItem].classList.remove('active');
-        cards[currentItem].classList.remove('active');
-
-        currentItem = index;
-
-        navItems[currentItem].classList.add('active');
-        cards[currentItem].classList.add('active');
-
-      });
-    
-    })
-
-  </script>
 
   <section id="sobre">
 
@@ -541,6 +518,40 @@
 
     </div>
   </footer>
+
+  <script>
+    const navItems = document.querySelectorAll('.section-header-nav ul li');
+    const cards = document.querySelectorAll('#ocupacoes .cards');
+
+    var currentItem = 0;
+
+    navItems.forEach(function(element, index) {
+    
+      element.addEventListener('click', function() {
+       
+        navItems[currentItem].classList.remove('active');
+        cards[currentItem].classList.remove('active');
+
+        currentItem = index;
+
+        navItems[currentItem].classList.add('active');
+        cards[currentItem].classList.add('active');
+
+      });
+    
+    })
+
+    const asks = document.querySelectorAll('.ask');
+
+    asks.forEach(function(element, index) {
+      element.addEventListener('click', function() {
+        element.classList.toggle('active');
+      });
+    });
+
+    // console.log(asks);
+
+  </script>
 
 
 </body>
