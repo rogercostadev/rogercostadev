@@ -114,10 +114,16 @@
             <img src="/assets/live-semanal/live_anterior_thumb.webp" alt="">
           </div>
           <div class="infos">
-            <h3>Live #01 & #02 - Construimos uma landing page para um servidor de GTA RP.</h3>
+            <h3>Live #01 & #02 - Criando uma landing page para um servidor de GTA RP.</h3>
             <p>
               Desenvolvemos uma página totalmente do zero, no código, com HTML, CSS & JavaScript.
             </p>
+            <a href="">
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.4 8.16327L10.552 5.71429L6.4 3.26531V8.16327ZM15.648 1.77143C15.752 2.1551 15.824 2.66939 15.872 3.32245C15.928 3.97551 15.952 4.53878 15.952 5.02857L16 5.71429C16 7.50204 15.872 8.81633 15.648 9.65714C15.448 10.3918 14.984 10.8653 14.264 11.0694C13.888 11.1755 13.2 11.249 12.144 11.298C11.104 11.3551 10.152 11.3796 9.272 11.3796L8 11.4286C4.648 11.4286 2.56 11.298 1.736 11.0694C1.016 10.8653 0.552 10.3918 0.352 9.65714C0.248 9.27347 0.176 8.75918 0.128 8.10612C0.0720001 7.45306 0.048 6.8898 0.048 6.4L0 5.71429C0 3.92653 0.128 2.61225 0.352 1.77143C0.552 1.03673 1.016 0.563265 1.736 0.359184C2.112 0.253061 2.8 0.179592 3.856 0.130612C4.896 0.0734693 5.848 0.0489795 6.728 0.0489795L8 0C11.352 0 13.44 0.130612 14.264 0.359184C14.984 0.563265 15.448 1.03673 15.648 1.77143Z" fill="#D9D9D9"/>
+              </svg>
+              Assistir
+            </a>
           </div>
         </div>
       </div>
@@ -125,6 +131,22 @@
     </section>
 
   </main>
+
+  <section class="cta-modal-aulao">
+    <div class="box">
+      <div class="video-wrapper">
+        <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <h2>
+        Live #01 - Criando uma landing page para um servidor de GTA RP.
+      </h2>
+      <p>
+        Assista a essa live completa e outras assinando o meu “Aulão de HTML, CSS & JavaScript”, por apenas 12x de R$11,31 ou R$97 via Pix.
+      </p>
+      <a href="">Comprar</a>
+    </div>
+  </section>
+
 
   <script type="module" template-footer>
     import footer from '/templates/footer.js';
@@ -139,6 +161,23 @@
       if(inputNome.value === '') {
         e.preventDefault();
         inputNome.focus();
+      }
+    });
+
+    const iframe = document.querySelector('iframe'); // 
+    const modal = document.querySelector('.cta-modal-aulao');
+    const play = document.querySelector('.last-live a');
+
+    play.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      modal.style.display = "grid";
+      iframe.src = "https://www.youtube.com/embed/shiat-xelzc?si=oYoPhwl88kPbebwu";
+    });
+
+    modal.addEventListener('click', function({ target }) {
+      if(target === modal) {
+        modal.style.display = "none";
       }
     });
   </script>
