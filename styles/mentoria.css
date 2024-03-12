@@ -1,0 +1,157 @@
+.flex {
+  display: flex;
+}
+
+#intro {
+  padding: 4rem 0;
+}
+#intro .infos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.4rem;
+}
+#intro .infos .btn {
+  margin-top: 2.4rem;
+}
+
+.page-title {
+  font-size: 5.6rem;
+  font-weight: 800;
+  max-width: 800px;
+  margin: 4.8rem 0 0;
+}
+
+.page-description {
+  font-size: 2rem;
+  font-weight: 400;
+  max-width: 800px;
+  opacity: 0.7;
+}
+
+.btn {
+  font-size: 1.4rem;
+  font-family: "Syne Mono";
+  color: #D9D9D9;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  padding: 16px 2.4rem;
+  background-color: rgba(217, 217, 217, 0.0078431373);
+  border-radius: 10px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%237D7D7DFF' stroke-width='1' stroke-dasharray='5%2c 10' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+.btn:hover {
+  background-color: rgba(217, 217, 217, 0.0196078431);
+}
+
+.section-title {
+  font-size: 5.6rem;
+  text-align: center;
+  margin-top: -40px;
+}
+
+.section-description {
+  font-family: "Syne Mono";
+  font-size: 2em;
+  font-weight: 400;
+  text-align: center;
+  opacity: 0.7;
+}
+
+svg {
+  max-width: 100%;
+}
+
+#funcionamento {
+  margin-top: 10rem;
+}
+
+#bonus {
+  margin-top: 10rem;
+}
+#bonus .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#bonus .boxes {
+  margin-top: 8rem;
+  width: 80%;
+  max-width: 795px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6rem;
+}
+#bonus .boxes .box-item {
+  max-width: 544px;
+  border-radius: 20px;
+  background-color: linear-gradient(223deg, #121212 13.37%, #242424 32.68%, #121212 56.44%);
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23474747FF' stroke-width='1' stroke-dasharray='5%2c 15' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  padding: 4rem 3.2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+#bonus .boxes .box-item:nth-child(even) {
+  align-self: flex-end;
+}
+#bonus .boxes .box-item h3 {
+  font-size: 3.4rem;
+  font-size: 700;
+  width: 80%;
+}
+#bonus .boxes .box-item p {
+  font-size: 2rem;
+  opacity: 0.7;
+}
+#bonus .boxes .box-item > span {
+  font-size: 12px;
+  opacity: 0.5;
+}
+#bonus .boxes .box-item .line-dots {
+  position: absolute;
+  bottom: -85px;
+  right: 0;
+}
+#bonus .boxes .box-item .line-dots.top {
+  bottom: unset;
+  top: -85px;
+  transform: rotateX(180deg);
+}
+#bonus .boxes .box-item .price {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  background-color: #161616;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%23474747FF' stroke-width='2' stroke-dasharray='10%25%2c 5%25' stroke-dashoffset='86' stroke-linecap='butt'/%3e%3c/svg%3e");
+  border-radius: 100px;
+}
+#bonus .boxes .box-item .price span {
+  font-size: 3rem;
+}
+#bonus .boxes .box-item .price span:first-child {
+  font-size: 1.6rem;
+}
+#bonus .boxes .box-item .price span:last-child {
+  font-family: "Syne";
+  margin-top: -8px;
+}
+
+@media screen and (max-width: 1440px) {
+  html {
+    font-size: 9px;
+  }
+  #bonus .box-item .line-dots {
+    display: none;
+  }
+}
