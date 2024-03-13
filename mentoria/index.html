@@ -288,7 +288,7 @@
     const bonusItems = document.querySelectorAll('#bonus .box-item');
 
     let options = {
-      root: document.querySelector("#scrollArea"),
+      root: document.querySelector("document"),
       rootMargin: "0px",
       threshold: 1.0,
     };
@@ -307,6 +307,7 @@
       entradas.forEach(function(entrada) {
         if(entrada.isIntersecting) {
           entrada.target.classList.add('active');
+          observer.unobserve(entrada.target);
         }
       })
     }
