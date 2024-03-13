@@ -72,7 +72,56 @@ svg {
   margin-top: 10rem;
   position: relative;
 }
+#funcionamento .items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  margin-top: 4rem;
+}
+#funcionamento .items .item {
+  flex-grow: 1;
+  flex-basis: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  border-radius: 10px;
+  background-color: #121212;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23474747FF' stroke-width='1' stroke-dasharray='5%2c 15' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  padding: 2.4rem;
+  position: relative;
+  overflow: hidden;
+}
+#funcionamento .items .item.active svg {
+  animation: toBig 5s ease forwards;
+}
+#funcionamento .items .item svg {
+  position: absolute;
+  bottom: -150px;
+  right: -150px;
+  align-self: center;
+  opacity: 0;
+}
+#funcionamento .items .item p {
+  font-size: 1.6rem;
+}
+#funcionamento .items .item:hover {
+  background-color: #161616;
+}
+#funcionamento .items .item .header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#funcionamento .items .item .header h3 {
+  font-size: 2rem;
+  max-width: 200px;
+}
 
+@keyframes toBig {
+  to {
+    opacity: 1;
+  }
+}
 #bonus {
   margin-top: 10rem;
   position: relative;
@@ -110,6 +159,11 @@ svg {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+  transition: 0.5s;
+  opacity: 0;
+}
+#bonus .boxes .box-item.active {
+  opacity: 1;
 }
 #bonus .boxes .box-item:nth-child(even) {
   align-self: flex-end;
@@ -185,12 +239,21 @@ svg {
   flex-direction: column;
   align-items: center;
   border-radius: 20px;
-  border: 1px dashed #474747;
   background: linear-gradient(223deg, rgba(18, 18, 18, 0.5) 13.37%, rgba(36, 36, 36, 0.5) 32.68%, rgba(18, 18, 18, 0.5) 56.44%);
+  position: relative;
+}
+#investimento .box::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23474747FF' stroke-width='1' stroke-dasharray='5%2c 15' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
 }
 #investimento .box .header {
   padding: 2.4rem 4rem;
-  border-bottom: 1px dashed #474747;
   width: 100%;
   display: flex;
   align-items: center;
@@ -205,7 +268,12 @@ svg {
   flex-direction: column;
   align-items: center;
   gap: 0px;
-  padding: 2.4rem 12rem 6rem;
+  padding: 2.4rem 12rem 0rem;
+}
+#investimento .box .footer .btn {
+  position: relative;
+  bottom: -2.2rem;
+  background-color: #161616;
 }
 #investimento .box .footer h3 {
   font-size: 2.6rem;
@@ -219,13 +287,17 @@ svg {
   font-family: "Syne";
   font-size: 2rem;
 }
+#investimento .box .divisor {
+  width: 100%;
+  height: 1px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23474747FF' stroke-width='1' stroke-dasharray='5%2c 15' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
 #investimento .box .body {
   width: 100%;
-  padding: 4rem 4rem 6rem;
+  padding: 2.4rem 4rem 4rem;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  border-bottom: 1px dashed #474747;
 }
 #investimento .box .body h3 {
   font-size: 2.6rem;
@@ -252,7 +324,7 @@ svg {
     width: 100%;
   }
 }
-@media screen and (max-width: 1440px) {
+@media screen and (min-width: 769px) and (max-width: 1440px) {
   html {
     font-size: 9px;
   }

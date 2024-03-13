@@ -63,7 +63,46 @@
         <h2 class="section-title">E como irá funcionar?</h2>
         <div class="items">
           <div class="item">
-            <div class="header"></div>
+            <div class="header">
+              <img src="/assets/mentoria/time-icon.svg" alt="Tempo" loading="lazy">
+              <h3>3 meses de<br/>acompanhamento</h3>
+            </div>
+            <p>Todos os dias, durante 3 meses, você poderá contar com a minha ajuda.</p>
+            <svg width="345" height="345" viewBox="0 0 345 345" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="172.5" cy="172.5" r="92.815" fill="#4D34E7" fill-opacity="0.1"/>
+              <circle cx="172.5" cy="172.5" r="109.567" fill="#4D34E7" fill-opacity="0.1"/>
+              <circle cx="172.5" cy="172.5" r="132.205" fill="#4D34E7" fill-opacity="0.1"/>
+              <circle cx="172.5" cy="172.5" r="148.957" fill="#4D34E7" fill-opacity="0.1"/>
+              <circle cx="172.5" cy="172.5" r="172.5" fill="#4D34E7" fill-opacity="0.1"/>
+            </svg>
+          </div>
+          <div class="item">
+            <div class="header">
+              <img src="/assets/mentoria/date-icon.svg" alt="Tempo" loading="lazy">
+              <h3>Encontros<br/>semanais</h3>
+            </div>
+            <p>Por pelo menos 1 dia na semana, entraremos em call para acompanhar o seu progresso.</p>
+            <svg width="345" height="345" viewBox="0 0 345 345" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="172.5" cy="172.5" r="92.815" fill="#7C1472" fill-opacity="0.1"/>
+              <circle cx="172.5" cy="172.5" r="109.567" fill="#7C1472" fill-opacity="0.1"/>
+              <circle cx="172.5" cy="172.5" r="132.205" fill="#7C1472" fill-opacity="0.1"/>
+              <circle cx="172.5" cy="172.5" r="148.957" fill="#7C1472" fill-opacity="0.1"/>
+              <circle cx="172.5" cy="172.5" r="172.5" fill="#7C1472" fill-opacity="0.1"/>
+            </svg>
+          </div>
+          <div class="item">
+            <div class="header">
+              <img src="/assets/mentoria/time-icon.svg" alt="Tempo" loading="lazy">
+              <h3>3 meses de acompanhamento</h3>
+            </div>
+            <p>Todos os dias, durante 3 meses, você poderá contar com a minha ajuda.</p>
+            <svg width="345" height="345" viewBox="0 0 345 345" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="172.5" cy="172.5" r="92.815" fill="#BACD46" fill-opacity="0.1"/>
+              <circle cx="172.5" cy="172.5" r="109.567" fill="#BACD46" fill-opacity="0.1"/>
+              <circle cx="172.5" cy="172.5" r="132.205" fill="#BACD46" fill-opacity="0.1"/>
+              <circle cx="172.5" cy="172.5" r="148.957" fill="#BACD46" fill-opacity="0.1"/>
+              <circle cx="172.5" cy="172.5" r="172.5" fill="#BACD46" fill-opacity="0.1"/>
+            </svg>
           </div>
         </div>
       </div>
@@ -195,6 +234,7 @@
           <div class="header">
             <img src="/assets/mentoria/mentoria-logo.svg" alt="Mentoria Front" loading="lazy">
           </div>
+          <span class="divisor"></span>
           <div class="body">
             <h3>No tempo da mentoria</h3>
             <p class="item">
@@ -223,11 +263,18 @@
               Aulão de HTML, CSS & JavaScript
             </p>
           </div>
+          <span class="divisor"></span>
           <div class="footer">
             <h3>Investimento</h3>
             <span class="price">
               <span>R$</span>997,00
             </span>
+            <a href="" class="btn">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.871335 8.82842L8.52818 1.17158M8.52818 1.17158V6.91421M8.52818 1.17158H2.78555" stroke="white" stroke-opacity="0.75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Aplicar para a mentoria
+            </a>
           </div>
         </div>
 
@@ -235,6 +282,38 @@
     </section>
 
   </main>
+
+  <script type="text/javascript">
+    const funcionamentoItems = document.querySelectorAll('#funcionamento .item');
+    const bonusItems = document.querySelectorAll('#bonus .box-item');
+
+    let options = {
+      root: document.querySelector("#scrollArea"),
+      rootMargin: "0px",
+      threshold: 1.0,
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+
+    funcionamentoItems.forEach(function(elemento) {
+      observer.observe(elemento);
+    })
+
+    bonusItems.forEach(function(elemento) {
+      observer.observe(elemento);
+    })
+    
+    function callback(entradas, observer) {
+      entradas.forEach(function(entrada) {
+        if(entrada.isIntersecting) {
+          entrada.target.classList.add('active');
+        }
+      })
+    }
+    
+
+    
+  </script>
 
   <script type="module" template-footer>
     import footer from '/templates/footer.js';
