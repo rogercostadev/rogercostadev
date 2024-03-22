@@ -1,11 +1,122 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Live 03 - Criando um script de conteúdo dinâmico</title>
+
+  <link rel="stylesheet" href="/styles/global.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Syne Mono";
+      background: #121212;
+      color: #D9D9D9;
+      line-height: 1.4;
+    }
+
+    .container {
+      width: 70%;
+      max-width: 1100px;
+      margin: 0 auto;
+
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      gap: 4.0rem;
+
+      margin-top: 10rem;
+    }
+
+    .navigation {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .navigation .item {
+      font-family: inherit;
+      background: transparent;
+      padding: 8px 12px;
+      width: 100%;
+      border: 1px solid #393838;
+      border-radius: 6px;
+
+      color: #D9D9D9;
+    }
+
+    .navigation .item:hover {
+      background: #FFFFFF05;
+    }
+
+    .indicadores {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    section {
+      padding: 2.4rem;
+      border: 1px solid #393838;
+      border-radius: 6px;
+    }
+
+    h2 {
+      font-family: "Syne Mono";
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 14px;
+      opacity: .5;
+    }
+  </style>
 </head>
 <body>
   
+  <div class="container">
+
+    <div class="navigation">
+
+      <button class="item">Hubmembers</button>
+      <button class="item">Pacote de Scripts para Elementor</button>
+      <button class="item">Aulão de HTML, CSS & JavaScript</button>
+      <button class="item">Consultoria</button>
+      <button class="item">Mentoria</button>
+
+    </div>
+
+    <div class="indicadores">
+
+      <section>
+        <h2>Hubmembers</h2>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      </section>
+      <section>
+        <h2>Pacote de Scripts para Elementor</h2>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      </section>
+      <section>
+        <h2>Aulão de HTML, CSS & JavaScript</h2>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      </section>
+      <section>
+        <h2>Consultoria</h2>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      </section>
+      <section>
+        <h2>Mentoria</h2>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      </section>
+
+    </div>
+  </div>
+
 </body>
 </html>
