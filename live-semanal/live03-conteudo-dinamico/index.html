@@ -98,37 +98,37 @@
 
     <div class="navigation">
 
-      <button class="item btn-acionador active" data-id="hubmembers">Hubmembers</button>
-      <button class="item btn-acionador" data-id="pacote">Pacote de Scripts para Elementor</button>
-      <button class="item btn-acionador" data-id="aulao">Aulão de HTML, CSS & JavaScript</button>
-      <button class="item btn-acionador" data-id="consultoria">Consultoria</button>
-      <button class="item btn-acionador" data-id="mentoria">Mentoria</button>
+      <button class="item btn-acionador active" data-banana="hubmembers">Hubmembers</button>
+      <button class="item btn-acionador" data-banana="pacote">Pacote de Scripts para Elementor</button>
+      <button class="item btn-acionador" data-banana="aulao">Aulão de HTML, CSS & JavaScript</button>
+      <button class="item btn-acionador" data-banana="consultoria">Consultoria</button>
+      <button class="item btn-acionador" data-banana="mentoria">Mentoria</button>
 
     </div>
 
     <div class="indicadores">
 
-      <section class="section-indicadora active" data-id="hubmembers">
+      <section class="section-indicadora active" data-banana="hubmembers">
         <h2>Hubmembers</h2>
-        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accbananaent, sometimes on purpose (injected humour and the like).</p>
       </section>
       
-      <section class="section-indicadora" data-id="pacote">
+      <section class="section-indicadora" data-banana="pacote">
         <h2>Pacote de Scripts para Elementor</h2>
-        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accbananaent, sometimes on purpose (injected humour and the like).</p>
       </section>
 
-      <section class="section-indicadora" data-id="aulao">
+      <section class="section-indicadora" data-banana="aulao">
         <h2>Aulão de HTML, CSS & JavaScript</h2>
-        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accbananaent, sometimes on purpose (injected humour and the like).</p>
       </section>
 
-      <section class="section-indicadora" data-id="consultoria">
+      <section class="section-indicadora" data-banana="consultoria">
         <h2>Consultoria</h2>
-        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accbananaent, sometimes on purpose (injected humour and the like).</p>
       </section>
 
-      <section class="section-indicadora" data-id="mentoria">
+      <section class="section-indicadora" data-banana="mentoria">
         <h2>Mentoria</h2>
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
       </section>
@@ -145,19 +145,16 @@
     buttonsAcionadores.forEach(function(elemento, indice) {
       elemento.addEventListener('click', function(event) {
 
-        console.log(indice);
-
         buttonsAcionadores[currentItem].classList.remove('active');
         elemento.classList.add('active');
         currentItem = indice;
       
-        const dataID = elemento.dataset.id;
+        const dataID = elemento.dataset.banana;
         
         sectionsIndicadores.forEach(function(secao) {
-          const secaoID = secao.dataset.id;
-          
-          secao.classList.remove('active');
+          const secaoID = secao.dataset.banana;
 
+          secao.classList.remove('active');
           if(dataID === secaoID) {
             secao.classList.add('active');
           }
