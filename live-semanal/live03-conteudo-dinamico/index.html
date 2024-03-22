@@ -59,10 +59,15 @@
       gap: 16px;
     }
 
-    section {
+    .section-indicadora {
       padding: 2.4rem;
       border: 1px solid #393838;
       border-radius: 6px;
+      display: none;
+    }
+
+    .section-indicadora.active {
+      display: block;
     }
 
     h2 {
@@ -76,6 +81,15 @@
       font-size: 14px;
       opacity: .5;
     }
+
+    .btn-acionador {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+
+    .btn-acionador.active {
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
@@ -84,39 +98,76 @@
 
     <div class="navigation">
 
-      <button class="item">Hubmembers</button>
-      <button class="item">Pacote de Scripts para Elementor</button>
-      <button class="item">Aulão de HTML, CSS & JavaScript</button>
-      <button class="item">Consultoria</button>
-      <button class="item">Mentoria</button>
+      <button class="item btn-acionador active" data-id="hubmembers">Hubmembers</button>
+      <button class="item btn-acionador" data-id="pacote">Pacote de Scripts para Elementor</button>
+      <button class="item btn-acionador" data-id="aulao">Aulão de HTML, CSS & JavaScript</button>
+      <button class="item btn-acionador" data-id="consultoria">Consultoria</button>
+      <button class="item btn-acionador" data-id="mentoria">Mentoria</button>
 
     </div>
 
     <div class="indicadores">
 
-      <section>
+      <section class="section-indicadora active" data-id="hubmembers">
         <h2>Hubmembers</h2>
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
       </section>
-      <section>
+      
+      <section class="section-indicadora" data-id="pacote">
         <h2>Pacote de Scripts para Elementor</h2>
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
       </section>
-      <section>
+
+      <section class="section-indicadora" data-id="aulao">
         <h2>Aulão de HTML, CSS & JavaScript</h2>
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
       </section>
-      <section>
+
+      <section class="section-indicadora" data-id="consultoria">
         <h2>Consultoria</h2>
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
       </section>
-      <section>
+
+      <section class="section-indicadora" data-id="mentoria">
         <h2>Mentoria</h2>
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
       </section>
 
     </div>
   </div>
+
+  <script type="text/javascript">
+    const buttonsAcionadores = document.querySelectorAll('.btn-acionador');
+    const sectionsIndicadores = document.querySelectorAll('.section-indicadora');
+
+    var currentItem = 0;
+    
+    buttonsAcionadores.forEach(function(elemento, indice) {
+      elemento.addEventListener('click', function(event) {
+
+        console.log(indice);
+
+        buttonsAcionadores[currentItem].classList.remove('active');
+        elemento.classList.add('active');
+        currentItem = indice;
+      
+        const dataID = elemento.dataset.id;
+        
+        sectionsIndicadores.forEach(function(secao) {
+          const secaoID = secao.dataset.id;
+          
+          secao.classList.remove('active');
+
+          if(dataID === secaoID) {
+            secao.classList.add('active');
+          }
+          
+        }) 
+
+      });
+    })
+
+  </script>
 
 </body>
 </html>
