@@ -63,6 +63,10 @@
   mix-blend-mode: color-dodge;
 }
 
+.whatWeDo {
+  margin-top: 10rem;
+}
+
 .whatWeDo .items {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -143,6 +147,7 @@
 }
 
 .howWork {
+  margin-top: 10rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -189,8 +194,10 @@
 }
 
 .howWork h4 {
+  font-family: "Syne Mono";
   font-size: 4rem;
   font-weight: 100;
+  color: rgba(217, 217, 217, 0.3137254902);
 }
 
 .howWork h3 {
@@ -203,4 +210,154 @@
   font-size: 16px;
   font-weight: 400;
   color: #858787;
+}
+
+.twoColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.4rem;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.briefing {
+  margin-bottom: 4rem;
+}
+
+.briefing .decoration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.briefing .circle {
+  width: 6px;
+  height: 6px;
+  background: #686868;
+  border-radius: 200px;
+}
+
+.briefing .line {
+  width: 1px;
+  height: 90%;
+  background: linear-gradient(to bottom, transparent, #686868);
+}
+
+.meetUs svg, .briefing svg {
+  position: absolute;
+  top: 50%;
+}
+
+.briefing {
+  margin-top: 10rem;
+}
+
+.briefing .wrapper {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  gap: 6rem;
+  margin: 6rem auto 0;
+}
+
+.briefing input, .briefing textarea {
+  width: 100%;
+  background: #212121;
+  color: #d9d9d9;
+  border: 1px solid transparent;
+  font-family: inherit;
+  font-size: 12px;
+  padding: 16px;
+  border-radius: 6px;
+  outline: none;
+}
+.briefing input:focus, .briefing textarea:focus {
+  border: 1px solid #303030;
+}
+
+.briefing textarea {
+  margin: 4rem 0 16px 0;
+  resize: none;
+}
+
+.briefing label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #858787;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.briefing .infos h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #858787;
+}
+
+.briefing .infos p {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #858787;
+}
+
+.briefing .checkboxs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.briefing h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #858787;
+  margin: 4rem 0 2.4rem 0;
+}
+
+.briefing .checkbox {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.briefing .checkbox .box {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: #212121;
+  display: grid;
+  place-items: center;
+}
+
+.briefing .checkbox.check .box svg {
+  opacity: 1;
+}
+
+.briefing .checkbox .box svg {
+  width: 100%;
+  position: inherit;
+  display: inherit;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.briefing .checkbox p {
+  font-size: 14px;
+}
+
+.briefing button {
+  font-family: "Syne Mono";
+  cursor: pointer;
+  max-width: 220px;
+  border: none;
+}
+
+.briefing button span {
+  transition: 1s;
+}
+
+.briefing button:hover span:nth-child(1) {
+  background: linear-gradient(to right, transparent, transparent, #FFF);
 }
