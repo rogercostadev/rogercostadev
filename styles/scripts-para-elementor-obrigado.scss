@@ -1,0 +1,425 @@
+.intro {
+  padding: 10rem 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.page-title {
+  font-size: 4.6rem;
+  // max-width: 720px;
+
+  span {
+    font-family: inherit;
+    font-size: .7em;
+    font-weight: 200;
+  }
+}
+
+.page-description {
+  font-size: 2rem;
+  max-width: 600px;
+
+  font-weight: 200;
+  opacity: .5;
+}
+
+.section-title {
+  font-size: 3.6rem;
+}
+
+.btn {
+
+  position: relative;
+
+  display: grid;
+  place-content: center;
+
+  padding: 2.0rem 2.4rem;
+
+  border-radius: 1rem;
+  /* border: 1px solid #000; */
+  background: linear-gradient(130deg, rgba(215, 202, 202, 0.15) 0%, rgba(101, 99, 99, 0.00) 100%);
+  border-radius: 4px;
+  /* background: linear-gradient(142deg, rgba(255, 255, 255, 0.05) 0%, transparent); */
+  /* background: transparent; */
+
+  transition: 1s; 
+
+  font-family: "Syne Mono";
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: #D9D9D970;
+  text-decoration: none;
+
+  letter-spacing: 2px;
+
+  transition: .5s;
+
+  span {
+    transition: .5s;
+    left: 25%;
+
+    width: 50%;
+  }
+
+  &:hover {
+    // transform: scale(1.05);
+
+    span {
+      width: 100% !important;
+      left: 0;
+    }
+  }
+}
+
+.btn span:first-child {
+  position: absolute;
+  top: 0;
+  // width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #656262, #d9d9d9, #656262, transparent);
+  mix-blend-mode: color-dodge;
+}
+
+.btn span:last-child {
+  position: absolute;
+  bottom: 0;
+  // width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #656262, #d9d9d9, #656262, transparent);
+  mix-blend-mode: color-dodge;
+}
+
+.whatWeDo {
+  margin-top: 10rem;
+}
+
+.whatWeDo .items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3.2rem;
+
+  // width: 80%;
+  // max-width: 1266px;
+  margin: 6rem auto 0 auto;
+}
+
+.whatWeDo .item {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.whatWeDo .infos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.whatWeDo h4 {
+  font-family: "Syne Mono";
+  font-size: 4.0rem;
+  font-weight: 200;
+  margin-bottom: 16px;
+  color: #D9D9D950;
+}
+
+.whatWeDo h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2.4rem;
+  max-width: 280px;
+}
+
+.whatWeDo p {
+  font-size: 16px;
+  font-weight: 400;
+  opacity: .7;
+  margin-bottom: 5.6rem;
+  min-height: 75px;
+}
+
+.whatWeDo .decoration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+  padding-top: 2.4rem;
+}
+
+.whatWeDo .circle {
+  width: 6px;
+  height: 6px;
+  background: #686868;
+  border-radius: 200px;
+}
+
+.whatWeDo .line {
+  width: 1px;
+  height: 90%;
+  background: linear-gradient(to bottom, transparent, #686868);
+}
+
+.whatWeDo svg {
+  position: absolute;
+  top: 50%;
+}
+
+.whatWeDo > p {
+  font-size: 16px;
+  text-align: center;
+  color: #858787;
+
+  max-width: 560px;
+  margin: 5rem auto 0;
+}
+
+.whatWeDo > p span {
+  font-weight: 600;
+}
+
+.howWork {
+  margin-top: 10rem;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .section-title {
+    align-self: flex-start
+  }
+}
+
+.howWork a {
+  margin-top: 6.0rem;
+}
+
+.howWork .items {
+  margin: 6rem auto 0;
+  // max-width: 1266px;
+  // width: 80%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2.4rem;
+
+  list-style: none;
+}
+
+.howWork .item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.howWork .numberWraper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+
+  position: relative;
+}
+
+.howWork .numberWraper .line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #444343 80%);
+}
+
+.howWork .numberWraper svg {
+  position: absolute;
+  left: 50%;
+}
+
+.howWork h4 {
+  font-family: "Syne Mono";
+  font-size: 4.0rem;
+  font-weight: 100;
+  color: #d9d9d950;
+}
+
+.howWork h3 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin: 2.4rem 0;
+}
+
+.howWork p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #858787;
+}
+
+.twoColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.4rem;
+
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.briefing {
+  margin-bottom: 4rem;
+}
+
+.briefing .decoration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+}
+
+.briefing .circle {
+  width: 6px;
+  height: 6px;
+  background: #686868;
+  border-radius: 200px;
+}
+
+.briefing .line {
+  width: 1px;
+  height: 90%;
+  background: linear-gradient(to bottom, transparent, #686868);
+}
+
+.meetUs svg, .briefing svg {
+  position: absolute;
+  top: 50%;
+}
+
+.briefing {
+  margin-top: 10rem;
+}
+
+.briefing .wrapper {
+
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  gap: 6rem;
+
+  margin: 6.0rem auto 0;
+}
+
+.briefing input, .briefing textarea {
+  width: 100%;
+  background: #212121;
+  color: #d9d9d9;
+  border: 1px solid transparent;
+
+  font-family: inherit;
+  font-size: 12px;
+  padding: 16px;
+  border-radius: 6px;
+
+  outline: none;
+
+  &:focus {
+    border: 1px solid #303030;
+  }
+}
+
+.briefing textarea {
+  margin: 4rem 0 16px 0;
+  resize: none;
+}
+
+
+.briefing label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #858787;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.briefing .infos h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #858787;;
+}
+
+.briefing .infos p {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #858787;
+}
+
+.briefing .checkboxs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.briefing h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #858787;
+  margin: 4rem 0 2.4rem 0;
+}
+
+.briefing .checkbox {
+  width: 40%;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  cursor: pointer;
+}
+
+.briefing .checkbox .box {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: #212121;
+
+  display: grid;
+  place-items: center;
+}
+
+.briefing .checkbox.check .box svg {
+  opacity: 1;
+}
+
+.briefing .checkbox .box svg {
+  width: 100%;
+  position: inherit;
+  display: inherit;
+  opacity: 0;
+
+  transition: .5s;
+}
+
+.briefing .checkbox p {
+  font-size: 14px;
+}
+
+.briefing button {
+  font-family: "Syne Mono";
+  cursor: pointer;
+  max-width: 220px;
+  border: none;
+}
+
+.briefing button span {
+  transition: 1s;
+}
+
+.briefing button:hover span:nth-child(1) {
+  background: linear-gradient(to right, transparent, transparent, #FFF);
+}
+
+.my-projects {
+  margin-top: 10rem;
+
+  .section-title {
+    max-width: 500px;
+  }
+}
