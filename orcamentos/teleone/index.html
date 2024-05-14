@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/styles/global.min.css" />
+    <link rel="stylesheet" href="/styles/mentoria.min.css" />
+
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/png" />
+
+    <title>Orçamento para Teleone</title>
+  </head>
+  <body>
+    <script type="module" template-header>
+      import header from "/templates/header.js";
+      document.querySelector("script[template-header]").outerHTML = header;
+    </script>
+
+    <main id="page-wrapper">
+      <section id="intro">
+        <div class="container flex">
+          <div class="infos">
+            <!-- <img
+              src="/assets/mentoria/mentoria-logo.svg"
+              alt="Logo da Mentoria Front"
+              loading="eager"
+            /> -->
+            <h1 class="page-title">Orçamento para Teleone.</h1>
+            <p class="page-description">
+              Orçamento para alteração de CSS para o dashboard interno do
+              Software Zabbix 7 GPLI.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="investimento" style="margin-top: 10rem">
+        <svg
+          class="light"
+          width="1540"
+          height="1540"
+          viewBox="0 0 1540 1540"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g filter="url(#filter0_f_47_80)">
+            <circle
+              cx="770"
+              cy="770"
+              r="387.402"
+              fill="#121212"
+              fill-opacity="0.05"
+            />
+            <circle
+              cx="770"
+              cy="770"
+              r="457.323"
+              fill="#121212"
+              fill-opacity="0.05"
+            />
+            <circle
+              cx="770"
+              cy="770"
+              r="551.811"
+              fill="#121212"
+              fill-opacity="0.05"
+            />
+            <circle
+              cx="770"
+              cy="770"
+              r="621.732"
+              fill="#121212"
+              fill-opacity="0.05"
+            />
+            <circle
+              cx="770"
+              cy="770"
+              r="720"
+              fill="#121212"
+              fill-opacity="0.05"
+            />
+          </g>
+          <defs>
+            <filter
+              id="filter0_f_47_80"
+              x="0"
+              y="0"
+              width="1540"
+              height="1540"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="BackgroundImageFix"
+                result="shape"
+              />
+              <feGaussianBlur
+                stdDeviation="25"
+                result="effect1_foregroundBlur_47_80"
+              />
+            </filter>
+          </defs>
+        </svg>
+
+        <div class="container">
+          <h2 class="section-title">O que você vai receber</h2>
+
+          <div class="box">
+            <div class="header">
+              <img
+                src="/assets/mentoria/mentoria-logo.svg"
+                alt="Mentoria Front"
+                loading="lazy"
+              />
+            </div>
+            <span class="divisor"></span>
+            <div class="body">
+              <h3>No tempo da mentoria</h3>
+              <p class="item">
+                <img
+                  src="/assets/mentoria/mentoria-icon.svg"
+                  alt=""
+                  loading="lazy"
+                />
+                3 meses de acompanhamento exclusivo
+              </p>
+              <p class="item">
+                <img
+                  src="/assets/mentoria/mentoria-icon.svg"
+                  alt=""
+                  loading="lazy"
+                />
+                Encontros semanais no Meet
+              </p>
+              <p class="item">
+                <img
+                  src="/assets/mentoria/mentoria-icon.svg"
+                  alt=""
+                  loading="lazy"
+                />
+                WhatApp exclusivo de acompanhamento
+              </p>
+              <p class="item">
+                <img
+                  src="/assets/mentoria/mentoria-icon.svg"
+                  alt=""
+                  loading="lazy"
+                />
+                Plano de ação individual
+              </p>
+              <h3>Vitalício</h3>
+              <p class="item">
+                <img
+                  src="/assets/mentoria/mentoria-icon.svg"
+                  alt=""
+                  loading="lazy"
+                />
+                Pacote de Scripts para Elementor
+              </p>
+              <p class="item">
+                <img
+                  src="/assets/mentoria/mentoria-icon.svg"
+                  alt=""
+                  loading="lazy"
+                />
+                Aulão de HTML, CSS & JavaScript
+              </p>
+            </div>
+            <span class="divisor"></span>
+            <div class="footer">
+              <h3>Investimento</h3>
+              <span class="price"> <span>R$</span>1497,00 </span>
+              <a
+                href="https://api.whatsapp.com/send?phone=5513982280148&text=Ol%C3%A1%20Roger,%20vim%20do%20seu%20site%20e%20estou%20interessado%20na%20sua%20mentoria."
+                class="btn"
+              >
+                <svg
+                  width="10"
+                  height="10"
+                  viewBox="0 0 10 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.871335 8.82842L8.52818 1.17158M8.52818 1.17158V6.91421M8.52818 1.17158H2.78555"
+                    stroke="white"
+                    stroke-opacity="0.75"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Aplicar para a mentoria
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="text/javascript">
+      const funcionamentoItems = document.querySelectorAll(
+        "#funcionamento .item"
+      );
+      const bonusItems = document.querySelectorAll("#bonus .box-item");
+
+      let options = {
+        root: document.querySelector("document"),
+        rootMargin: "0px",
+        threshold: 1.0,
+      };
+
+      const observer = new IntersectionObserver(callback, options);
+
+      funcionamentoItems.forEach(function (elemento) {
+        observer.observe(elemento);
+      });
+
+      bonusItems.forEach(function (elemento) {
+        observer.observe(elemento);
+      });
+
+      function callback(entradas, observer) {
+        entradas.forEach(function (entrada) {
+          if (entrada.isIntersecting) {
+            entrada.target.classList.add("active");
+            observer.unobserve(entrada.target);
+          }
+        });
+      }
+    </script>
+
+    <script type="module" template-footer>
+      import footer from "/templates/footer.js";
+      document.querySelector("script[template-footer]").outerHTML = footer;
+    </script>
+  </body>
+</html>
