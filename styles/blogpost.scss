@@ -45,6 +45,8 @@ code {
   // background: #D9D9D905;
   padding: 4px 8px;
   border-radius: 6px;
+
+  text-decoration: underline;
   &:hover {
     background: var(--data-color);
   }
