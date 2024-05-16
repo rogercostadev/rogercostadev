@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- <link rel="stylesheet" href="./styles/global.min.css" /> -->
+    <link rel="stylesheet" href="/styles/global.min.css" />
+    <link rel="stylesheet" href="/styles/blogpost.min.css" />
+
+    <title>Blog</title>
+  </head>
+  <body>
+    <script type="module" template-header>
+      import header from "/templates/header.js";
+      document.querySelector("script[template-header]").outerHTML = header;
+    </script>
+
+    <section class="intro">
+      <div class="container">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-code"
+        >
+          <polyline points="16 18 22 12 16 6" />
+          <polyline points="8 6 2 12 8 18" />
+        </svg>
+        <h1 class="page-title">Eventos em JavaScript</h1>
+        <p class="page-description">
+          Aprenda sobre addEventListener para adicionar eventos aos seus
+          elementos HTML.
+        </p>
+        <div class="post-infos">
+          <p>Postado por Roger Costa - 16 de Maio de 2024.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="body container">
+      <!--  -->
+
+      <main class="content">
+        <p>
+          addEventListener é um método utilizado em linguagens de programação
+          como JavaScript para atribuir um ouvinte de evento a um elemento HTML.
+          Ele é usado para detectar quando um determinado evento ocorre em um
+          elemento específico, como um clique do mouse, uma tecla pressionada,
+          uma mudança de foco, entre outros.
+        </p>
+
+        <code>
+          <span
+            class="highlight"
+            data-highlight="element"
+            style="--data-color: #46cbf405"
+            >ELEMENT</span
+          >.addEventListener(
+          <span
+            class="highlight"
+            data-highlight="eventname"
+            style="--data-color: #46cbf410"
+            >'event_name'</span
+          >
+          , listener);
+        </code>
+
+        <div
+          class="highlighted"
+          data-highlight="element"
+          style="--data-color: #46cbf405"
+        >
+          <h2>ELEMENT</h2>
+          <p>O elemento em que o evento será aplicado.</p>
+        </div>
+
+        <div
+          class="highlighted"
+          data-highlight="eventname"
+          style="--data-color: #46cbf410"
+        >
+          <h2>event_name</h2>
+          <p>
+            O tipo de evento que associado ao ELEMENT. Ex: click, submit,
+            mouseover, etc.
+          </p>
+        </div>
+      </main>
+
+      <script>
+        const highlights = document.querySelectorAll(".highlight");
+        const highlighteds = document.querySelectorAll(".highlighted");
+
+        highlights.forEach(function (highlight, index) {
+          highlight.addEventListener("mouseover", function () {
+            const highlightedElement = document.querySelector(
+              `.highlighted[data-highlight='${highlight.dataset.highlight}']`
+            );
+
+            highlightedElement.classList.add("active");
+          });
+
+          highlight.addEventListener("mouseleave", function () {
+            const highlightedElement = document.querySelector(
+              `.highlighted[data-highlight='${highlight.dataset.highlight}']`
+            );
+
+            highlightedElement.classList.remove("active");
+          });
+        });
+      </script>
+
+      <!--  -->
+      <aside class="sidebar">
+        <section id="form-wrapper">
+          <h2>Inscreva-se para não perder uma live!</h2>
+
+          <form
+            id="sib-form"
+            method="POST"
+            action="https://99816cee.sibforms.com/serve/MUIFALpf52LfPEz6mnKQs_Xd2K2P9am-jKgVjKj-gbdpyAbrLNFOYU7D9XuK04QvWDJVegQUupUYjyQvTrg6JmUBSluB3YTM3-gaD6CTVD4Tos2r8D0lnYdXn2WpeXayFWtKMRQ7-b0l8YXI8LdjgNLkpyy7nHG6K9_47rF1EhNRWgUZhOjyewDmQ-72leulKiUJIb1_Lfunnkzs"
+            data-type="subscription"
+          >
+            <div class="input-wrapper">
+              <img
+                src="/assets/user-icon.svg"
+                alt="Ícone de usuário"
+                loading="lazy"
+              />
+              <input
+                class="input"
+                maxlength="200"
+                type="text"
+                id="NOME"
+                name="NOME"
+                autocomplete="off"
+                placeholder="Nome completo"
+              />
+            </div>
+
+            <div class="input-wrapper">
+              <img
+                src="/assets/email-icon.svg"
+                alt="Ícone de usuário"
+                loading="lazy"
+              />
+              <input
+                class="input"
+                type="text"
+                id="EMAIL"
+                name="EMAIL"
+                autocomplete="off"
+                placeholder="Seu melhor e-mail"
+                data-required="true"
+                required
+              />
+            </div>
+
+            <p class="alert">
+              Ao enviar, você concorda com os termos de uso e políticas do site.
+              Não enviamos spam.
+            </p>
+
+            <button
+              class="sib-form-block__button sib-form-block__button-with-loader"
+              form="sib-form"
+              type="submit"
+            >
+              QUERO ME INSCREVER
+            </button>
+
+            <input type="hidden" name="email_address_check" value="" />
+            <input type="hidden" name="locale" value="pt" />
+          </form>
+        </section>
+      </aside>
+    </div>
+
+    <script type="module" template-footer>
+      import footer from "/templates/footer.js";
+      document.querySelector("script[template-footer]").outerHTML = footer;
+    </script>
+  </body>
+</html>
