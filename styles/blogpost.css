@@ -76,7 +76,7 @@ code:hover {
   align-items: flex-start;
 }
 .content > * {
-  margin-bottom: 2.4rem;
+  margin-bottom: 16px;
   max-width: 100%;
 }
 .content p {
