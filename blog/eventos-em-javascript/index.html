@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/styles/global.min.css" />
     <link rel="stylesheet" href="/styles/blogpost.min.css" />
 
-    <title>Blog</title>
+    <title>Eventos em JavaScript - Roger Costa</title>
   </head>
   <body>
     <script type="module" template-header>
@@ -49,11 +49,11 @@
 
       <main class="content">
         <p>
-          addEventListener é um método utilizado em linguagens de programação
-          como JavaScript para atribuir um ouvinte de evento a um elemento HTML.
-          Ele é usado para detectar quando um determinado evento ocorre em um
-          elemento específico, como um clique do mouse, uma tecla pressionada,
-          uma mudança de foco, entre outros.
+          <b>'addEventListener'</b> é um método utilizado em linguagens de
+          programação como JavaScript para atribuir um ouvinte de evento a um
+          elemento HTML. Ele é usado para detectar quando um determinado evento
+          ocorre em um elemento específico, como um clique do mouse, uma tecla
+          pressionada, uma mudança de foco, entre outros.
         </p>
 
         <h2>Escopo do método addEventListener</h2>
@@ -62,22 +62,28 @@
           <span
             class="highlight"
             data-highlight="element"
-            style="--data-color: #46cbf450"
+            style="--data-color: #4d34e7"
             >ELEMENT</span
           >.addEventListener(
           <span
             class="highlight"
             data-highlight="eventname"
-            style="--data-color: #46cbf450"
+            style="--data-color: #4d34e7"
             >'EVENT_NAME'</span
           >
-          , listener);
+          ,
+          <span
+            class="highlight"
+            data-highlight="listener"
+            style="--data-color: #4d34e7"
+            >LISTENER</span
+          >);
         </code>
 
         <div
           class="highlighted"
           data-highlight="element"
-          style="--data-color: #46cbf450"
+          style="--data-color: #4d34e7"
         >
           <h3>ELEMENT</h3>
           <p>O elemento em que o evento será aplicado.</p>
@@ -86,12 +92,24 @@
         <div
           class="highlighted"
           data-highlight="eventname"
-          style="--data-color: #46cbf450"
+          style="--data-color: #4d34e7"
         >
           <h3>'EVENT_NAME'</h3>
           <p>
             O tipo de evento que associado ao ELEMENT. Ex: click, submit,
             mouseover, etc.
+          </p>
+        </div>
+
+        <div
+          class="highlighted"
+          data-highlight="listener"
+          style="--data-color: #4d34e7"
+        >
+          <h3>LISTENER</h3>
+          <p>
+            O objeto que receberá a notificação quando o evento ocorrer,
+            geralmente uma função.
           </p>
         </div>
       </main>
