@@ -86,6 +86,7 @@ code:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
 }
 .content .type-of-events .item {
   margin-bottom: 2.4rem;
@@ -120,6 +121,7 @@ code:hover {
   margin: 2.4rem 0;
   overflow-x: scroll;
   white-space: nowrap;
+  width: 100%;
 }
 .content h2 {
   font-size: 2.8rem;
