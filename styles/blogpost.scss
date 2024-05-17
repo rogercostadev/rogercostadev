@@ -46,13 +46,15 @@ code {
 }
 
 .highlight {
+  font-size: 16px;
+
   // background: #D9D9D905;
   padding: 4px 8px;
   border-radius: 6px;
 
   text-decoration: underline;
   &:hover {
-    background: var(--data-color);
+    background: #4431d3;
   }
 }
 
@@ -132,6 +134,11 @@ code {
         align-items: center;
         gap: 16px;
         margin-top: 16px;
+        margin-bottom: 16px;
+
+        background: #202020;
+        padding: 12px;
+        border-radius: 6px;
 
         .event {
           font-size: 14px;
