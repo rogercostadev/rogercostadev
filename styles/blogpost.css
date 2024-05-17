@@ -46,9 +46,11 @@ code:hover {
   background: transparent;
   padding: 12px;
   border-radius: 6px;
+  border: 1px solid transparent;
 }
 .highlighted.active {
-  background: var(--data-color);
+  background: rgba(68, 49, 211, 0.1176470588);
+  border: 1px dashed #4431d3;
 }
 
 .page-description {
@@ -83,8 +85,8 @@ code:hover {
   white-space: nowrap;
 }
 .content h2 {
-  font-size: 2.4rem;
-  margin: 2.4rem 0 16px;
+  font-size: 2.8rem;
+  margin: 4rem 0 16px;
 }
 .content h3 {
   font-size: 18px;

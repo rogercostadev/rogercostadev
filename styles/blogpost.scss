@@ -56,9 +56,11 @@ code {
   background: transparent;
   padding: 12px;
   border-radius: 6px;
+  border: 1px solid transparent;
 
   &.active {
-    background: var(--data-color);
+    background:#4431d31e;
+    border: 1px dashed #4431d3;
   }
 }
 
@@ -102,8 +104,8 @@ code {
   }
 
   h2 {
-    font-size: 2.4rem;
-    margin: 2.4rem 0 16px;
+    font-size: 2.8rem;
+    margin: 4rem 0 16px;
   }
 
   h3 {
