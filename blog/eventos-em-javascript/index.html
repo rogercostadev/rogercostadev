@@ -56,52 +56,109 @@
           pressionada, uma mudança de foco, entre outros.
         </p>
 
-        <h2>Escopo do método addEventListener</h2>
+        <section class="explanation">
+          <h2>Escopo do método addEventListener</h2>
 
-        <code>
-          <span
-            class="highlight"
-            data-highlight="element"
-            style="--data-color: #4d34e7"
-            >ELEMENT</span
-          >.addEventListener(
-          <span
-            class="highlight"
-            data-highlight="eventname"
-            style="--data-color: #4d34e7"
-            >'EVENT_NAME'</span
-          >
-          ,
-          <span
-            class="highlight"
-            data-highlight="listener"
-            style="--data-color: #4d34e7"
-            >LISTENER</span
-          >);
-        </code>
+          <code>
+            <span
+              class="highlight"
+              data-highlight="element"
+              style="--data-color: #4d34e7"
+              >ELEMENT</span
+            >.addEventListener(
+            <span
+              class="highlight"
+              data-highlight="eventname"
+              style="--data-color: #4d34e7"
+              >'EVENT_NAME'</span
+            >
+            ,
+            <span
+              class="highlight"
+              data-highlight="listener"
+              style="--data-color: #4d34e7"
+              >LISTENER</span
+            >);
+          </code>
 
-        <div class="highlighted" data-highlight="element">
-          <h3>ELEMENT</h3>
-          <p>O elemento em que o evento será aplicado.</p>
-        </div>
+          <div class="highlighted" data-highlight="element">
+            <h3>ELEMENT</h3>
+            <p>O elemento em que o evento será aplicado.</p>
+          </div>
 
-        <div class="highlighted" data-highlight="eventname">
-          <h3>'EVENT_NAME'</h3>
-          <p>
-            O tipo de evento que associado ao ELEMENT. Ex: click, submit,
-            mouseover, etc.
-          </p>
-        </div>
+          <div class="highlighted" data-highlight="eventname">
+            <h3>'EVENT_NAME'</h3>
+            <p>
+              O tipo de evento que associado ao ELEMENT. Ex: click, submit,
+              mouseover, etc.
+            </p>
+          </div>
 
-        <div class="highlighted" data-highlight="listener">
-          <h3>LISTENER</h3>
-          <p>
-            O objeto que receberá a notificação quando o evento ocorrer,
-            geralmente uma função.
-          </p>
-        </div>
+          <div class="highlighted" data-highlight="listener">
+            <h3>LISTENER</h3>
+            <p>
+              O objeto que receberá a notificação quando o evento ocorrer,
+              geralmente uma função.
+            </p>
+          </div>
+        </section>
 
-        <h2>Tipo de eventos</h2>
+        <section class="type-of-events">
+          <h2>Tipo de eventos</h2>
+
+          <div class="item">
+            <h3>Mouse Events</h3>
+            <p>
+              Mouse Events são os eventos que são acionados por interação do
+              mouse, seja um clique, duplo clique, passar do mouse, etc.
+            </p>
+
+            <div class="events">
+              <span
+                class="event"
+                data-explanation-id="mouse"
+                data-explanation="acionado quando um elemento é clicado"
+                >click</span
+              >
+              <span
+                class="event"
+                data-explanation-id="mouse"
+                data-explanation="acionado ao dar duplo clique com o mouse"
+                >dblclick</span
+              >
+              <span
+                class="event"
+                data-explanation-id="mouse"
+                data-explanation="acionado quando passar o mouse por cima de um elemento"
+                >mouseover</span
+              >
+            </div>
+
+            <p class="event-explanation" data-explanation-id="mouse"></p>
+          </div>
+
+          <div class="item">
+            <h3>Keyboard Events</h3>
+            <p>
+              Keyboard Events são os eventos acionados quando um usuário apertar
+              alguma tecla no teclado
+            </p>
+            <div class="events">
+              <span class="event">keyup</span>
+              <span class="event">keydown</span>
+            </div>
+          </div>
+
+          <div class="item">
+            <h3>Submit Event</h3>
+            <p>
+              Submit Event são os eventos associados ao envio de um formulário.
+            </p>
+            <div class="events">
+              <span class="event">submit</span>
+            </div>
+          </div>
+        </section>
       </main>
 
       <script>
@@ -123,6 +180,18 @@
             );
 
             highlightedElement.classList.remove("active");
+          });
+        });
+
+        const events = document.querySelectorAll(".events .event");
+        events.forEach(function (event, index) {
+          event.addEventListener("mouseover", function () {
+            const eventExplanation = document.querySelector(
+              `.event-explanation[data-explanation-id="${event.dataset.explanationId}"]`
+            );
+
+            eventExplanation.innerText = event.dataset.explanation;
+            eventExplanation.style.display = "inherit";
           });
         });
       </script>
